@@ -9,19 +9,16 @@
 
 require 'faker'
 
-Property.destroy_all
+
 User.destroy_all
-Child.destroy_all
+
 
 user1 = User.create(
   email: 'aaa@aaa.com',
-  password: "aaa")
+  password: "aaa",
+  child_name: "Clémence")
 
-child1 = Child.create(
-  child_name: "Alex",
-  child_image:"https://unsplash.com/photos/lSwbvdy4xjc/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU1ODExNTU2&force=true&w=640",
-  user_id: User.last.id
-  )
+
 
 # user2 = User.create(
 #   email: 'bbb@bbb.com',
@@ -40,20 +37,7 @@ images_urls = [
 'https://unsplash.com/photos/S_C_3a0iApE/download?force=true&w=640'
 ]
 
-4.times do |i|
-  property = Property.create(
-    title: Faker::Mountain.name,
-    price: (i+1)*100000,
-    description: Faker::Quotes::Shakespeare.hamlet_quote + ' ' + Faker::Quotes::Shakespeare.hamlet_quote + ' ' + Faker::Quotes::Shakespeare.hamlet_quote,
-    address: Faker::Address.full_address,
-    image_url: images_urls[i]
-    # user: User.find(rand(1..3))
-  )
-  
 
 
-end
-
-# Faker::House.room + ' : ' + Faker::House.furniture + ' ' + Faker::House.furniture + ' . ' + Faker::House.room + ' : ' + Faker::House.furniture + ' ' + Faker::House.furniture + ' . ' + Faker::House.room + ' : ' + Faker::House.furniture + ' ' + Faker::House.furniture + ' .  ' + 
 
 

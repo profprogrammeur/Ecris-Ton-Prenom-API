@@ -18,8 +18,8 @@ user1 = User.create(
   password: "aaa")
 
 child1 = Child.create(
-  child_name: "Alex",
-  child_image:"https://unsplash.com/photos/lSwbvdy4xjc/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU1ODExNTU2&force=true&w=640",
+  child_namehild: "Alex",
+  c_image:"https://unsplash.com/photos/lSwbvdy4xjc/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU1ODExNTU2&force=true&w=640",
   user_id: User.last.id
   )
 

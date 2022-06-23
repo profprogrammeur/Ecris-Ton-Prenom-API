@@ -10,7 +10,7 @@ class MembersController < ApplicationController
   end
 
  def update
-  puts "oooooooooooooo"
+  puts "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
   puts current_user
     if current_user.update(user_params)
       render_user_json

@@ -9,7 +9,26 @@ class MembersController < ApplicationController
     }
   end
 
+  def update
+    puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    # puts current_user
+      # if 
+        current_user.update(user_params)
+        puts "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
+        
+      # else
+      #   error_formatter(current_user)
+      # end
+  end
+
+
+
   private
+
+  def user_params
+    params.permit(:child_name, :child_image)
+  end
+
 
   def get_user_from_token
     jwt_payload = JWT.decode(request.headers['Authorization'].split(' ')[1],

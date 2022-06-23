@@ -15,11 +15,13 @@ Child.destroy_all
 
 user1 = User.create(
   email: 'aaa@aaa.com',
-  password: "aaa")
+  password: "aaa",
+  kid_name: "Malek",
+  kid_photo: "https://unsplash.com/photos/VZILDYoqn_U/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTl8fGtpZCUyMGdpcmx8ZW58MHx8fHwxNjU1OTAxMjU0&force=true&w=640")
 
 child1 = Child.create(
-  child_namehild: "Alex",
-  c_image:"https://unsplash.com/photos/lSwbvdy4xjc/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU1ODExNTU2&force=true&w=640",
+  child_name: "Alex",
+  child_image:"https://unsplash.com/photos/lSwbvdy4xjc/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU1ODExNTU2&force=true&w=640",
   user_id: User.last.id
   )
 

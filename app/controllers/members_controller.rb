@@ -20,6 +20,9 @@ class MembersController < ApplicationController
       #   error_formatter(current_user)
       # end
   end
+  def delete
+    current_user.destroy()    
+  end
 
 
 
